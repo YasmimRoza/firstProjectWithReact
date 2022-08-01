@@ -1,7 +1,7 @@
-import { createTheme } from '@mui/material';
+import  {createTheme} from '@mui/material';
 import { cyan, pink } from '@mui/material/colors';
 
-export const LightTheme = createTheme({
+export const DarkTheme = createTheme({
   palette: {
     primary: {
       main: pink[600],
@@ -16,8 +16,8 @@ export const LightTheme = createTheme({
       contrastText: '#fffff',
     },
     background: {
-      paper: '#fffff',
-      default: '#f7f6f3',
-    },
-  },
+      paper: '#303134',
+      default: '#202124',
+    }
+  }
 });

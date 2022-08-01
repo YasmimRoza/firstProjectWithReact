@@ -1,16 +1,19 @@
-import { ThemeProvider } from '@mui/material';
-import { BrowserRouter } from 'react-router-dom'
-import { AppRoutes } from './routes';
-import { LightTheme } from './shared/themes';
+import { BrowserRouter } from 'react-router-dom';
 
-export const App = () => {
+import { AppThemeProvider } from './shared/contexts';
+import { AppRoutes } from './routes';
+
+export function App() {
   return (
-    <ThemeProvider theme={LightTheme}>
-     <BrowserRouter>
-       <AppRoutes/>
-     </BrowserRouter>
-    </ThemeProvider>
+    <AppThemeProvider
+      themeName="light"
+      toggleTheme={function (): void {
+        throw new Error('Function not implemented.');
+      }}
+    >
+      <BrowserRouter>
+        <AppRoutes />
+      </BrowserRouter>
+    </AppThemeProvider>
   );
 }
-
-export default App;
