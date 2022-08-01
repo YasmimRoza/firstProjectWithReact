@@ -4,19 +4,19 @@ import { cyan, pink } from '@mui/material/colors';
 export const LightTheme = createTheme({
   palette: {
     primary: {
-      main: pink[600],
-      dark: pink[700],
+      main: pink[700],
+      dark: pink[800],
       light: pink[500],
-      contrastText: '#fffff',
+      contrastText: '#ffffff',
     },
     secondary: {
       main: cyan[500],
       dark: cyan[400],
       light: cyan[300],
-      contrastText: '#fffff',
+      contrastText: '#ffffff',
     },
     background: {
-      paper: '#fffff',
+      paper: '#ffffff',
       default: '#f7f6f3',
     },
   },
