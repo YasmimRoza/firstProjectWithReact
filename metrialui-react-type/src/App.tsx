@@ -2,17 +2,17 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { AppThemeProvider } from './shared/contexts';
 import { AppRoutes } from './routes';
+import { MenuLateral } from './shared/components';
 
 export function App() {
   return (
-    <AppThemeProvider
-      themeName="light"
-      toggleTheme={function (): void {
-        throw new Error('Function not implemented.');
-      }}
-    >
+    <AppThemeProvider>
       <BrowserRouter>
-        <AppRoutes />
+
+        <MenuLateral>
+          <AppRoutes />
+        </MenuLateral>
+
       </BrowserRouter>
     </AppThemeProvider>
   );

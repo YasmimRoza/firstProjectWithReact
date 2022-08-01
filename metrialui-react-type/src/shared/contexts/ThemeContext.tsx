@@ -5,7 +5,6 @@ import { Box, ThemeProvider } from '@mui/material';
 import { LightTheme, DarkTheme } from './../themes';
 
 interface IThemeContextData {
-    children?: React.ReactNode;
     themeName: 'light' | 'dark';
     toggleTheme: () => void;
 }
@@ -16,7 +15,11 @@ export const useAppThemeContext = () => {
   return useContext(ThemeContext);
 };
 
-export const AppThemeProvider: React.FC<IThemeContextData> = ({ children }) => {
+interface IAppThemeProviderProps {
+  children: React.ReactNode;
+}
+
+export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children }) => {
 
   const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
 
